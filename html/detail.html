@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Your Store</title>        
+        <meta name="description" content="My Store" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="http://demo.opencart.com/image/catalog/cart.png" rel="icon" />        
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+        <link href="css/slide_image.css" rel="stylesheet" media="screen" />
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen" />
+        <link href="css/jquery-ui.css" rel="stylesheet" media="screen" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/font.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquery.bxslider.css" rel="stylesheet" />
+        <link href="css/flexslider.css" rel="stylesheet" />
+        <link href="css/stylesheet.css" rel="stylesheet">    
+        <link href="css/prism.css" rel="stylesheet">
+        <link href="css/jquery.range.css" rel="stylesheet">
+        <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>  
+        <script src="js/jssor.js" type="text/javascript"></script>
+        <script src="js/jssor.slider.js" type="text/javascript"></script>
+        <script src="js/detail.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.js" type="text/javascript"></script>
+        <script src="js/jquery.bxslider.js" type="text/javascript"></script>
+        <script src="js/jquery.flexslider.js" type="text/javascript"></script>
+        <script src="js/jquery.range.js" type="text/javascript"></script>
+
+    </head>
+    <body class="common-home loading">
+        <nav id="top">
+            <div class="container">
+                <div class="pull-left">
+                    <a href="#"></a> <span class="hidden-xs hidden-sm hidden-md add-to-cart">custom care: 888-23-4567</span>
+                </div>
+                <div id="top-links" class="nav pull-right">
+                    <ul class="list-inline">
+                        <li>
+                            <form action="#" method="post" enctype="multipart/form-data" id="currency">
+                                <div class="btn-group">
+                                    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                        <strong>$</strong>
+                                        <span class="hidden-xs hidden-sm hidden-md add-to-cart">US</span> <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="currency-select btn btn-link btn-block" type="button" name="EUR">€</button></li>
+                                        <li><button class="currency-select btn btn-link btn-block" type="button" name="GBP">£</button></li>
+                                        <li><button class="currency-select btn btn-link btn-block" type="button" name="USD">$</button></li>
+                                    </ul>
+                                </div>
+                                <input type="hidden" name="code" value="" />
+                                <input type="hidden" name="redirect" value="#" />
+                            </form>
+                        </li>
+                        <li class="dropdown"><a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md add-to-cart">My Account</span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#">Register</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="wishlist-total" title="Wish List (0)"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md add-to-cart">Wish List (0)</span></a></li>
+                        <li><a href="#" title="Shopping Cart"><span class="hidden-xs hidden-sm hidden-md add-to-cart">Shopping Cart</span></a></li>
+                        <li><a href="#" title="Checkout"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md add-to-cart">Checkout</span></a></li>
+                        <li>
+                            <a href="javascript:void(0)" title="search" class="icon-search"><span class="hidden-xs hidden-sm hidden-md add-to-cart">Search</span></a>
+                            <div id="search" class="input-group">
+                                <input type="text" name="search" value="" placeholder="Search" class="form-control input-lg" />
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>      
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div id="logo">
+                            <a href="#"><img src="images/logo.png" title="Your Store" alt="Your Store" class="img-responsive" /></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <nav id="menu" class="navbar">
+                            <div class="navbar-header"><span id="category" class="visible-xs">Categories</span>
+                                <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+                            </div>
+                            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">news</a>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-inner">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">PC (0)</a></li>
+                                                    <li><a href="#">Mac (1)</a></li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="see-all">See All Desktops</a> 
+                                        </div>
+                                    </li>
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">designers</a>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-inner">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">Macs</a></li>
+                                                    <li><a href="#">Windows</a></li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="see-all">See All Laptops &amp; Notebooks</a> 
+                                        </div>
+                                    </li>
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">women</a>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-inner">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">Mice and Trackballs (0)</a></li>
+                                                    <li><a href="#">Monitors (2)</a></li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="see-all">See All Components</a> 
+                                        </div>
+                                    </li>
+                                    <li><a href="#">men</a></li>
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">clearence</a>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-inner">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">test 11 (0)</a></li>
+                                                    <li><a href="#">test 12 (0)</a></li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="see-all">See All MP3 Players</a> 
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-sm-2">
+                        <div id="cart" class="btn-group btn-block">
+                            <button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="btn btn-inverse btn-block btn-lg dropdown-toggle">
+                                <span id="cart-total">Your cart</span>
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                                <li>
+                                    <p class="text-center">Your shopping cart is empty!</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-container">
+            <ul class="breadcrumb">
+                <li><a href="#"><i class="fa fa-home"></i></a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Clothing</a></li>
+                <li><a href="#">Blouses & Shirts</a></li>
+                <li><a href="#">B.young</a></li>
+                <li><a href="#">Sofi Blouse</a></li>
+            </ul>
+            <div class="row-container container-detail">
+                <div class="col-sm-4">
+                    <div id="slider_detail_container" style="position: relative; top: 0px; left: 0px; width: 400px; height: 500px; background: #191919; overflow: hidden;">
+                        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block; background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;"></div>
+                            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center; top: 0px; left: 0px;width: 100%;height:100%;"></div>
+                        </div>
+                        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 400px; height: 500px; overflow: hidden;">
+                            <div>
+                                <img u="image" src="images/detail/img1.jpg" />
+                                <img u="thumb" src="images/detail/thumb/img1.jpg" />
+                            </div>
+                            <div>
+                                <img u="image" src="images/detail/img1.jpg" />
+                                <img u="thumb" src="images/detail/thumb/img2.jpg" />
+                            </div>
+                            <div>
+                                <img u="image" src="images/detail/img1.jpg" />
+                                <img u="thumb" src="images/detail/thumb/img3.jpg" />
+                            </div>
+                            <div>
+                                <img u="image" src="images/detail/img1.jpg" />
+                                <img u="thumb" src="images/detail/thumb/img4.jpg" />
+                            </div>
+                            <span u="arrowleft" class="jssora05l" style="top: 240px; left: 8px;"></span>
+                            <span u="arrowright" class="jssora05r" style="top: 240px; right: 8px"></span>
+                            <div u="thumbnavigator" class="jssort01" style="left: 0px; bottom: 0px;">                                
+                                <div u="slides" style="cursor: default;">
+                                    <div u="prototype" class="p">
+                                        <div class=w><div u="thumbnailtemplate" class="t"></div></div>
+                                        <div class=c></div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="product-shop">
+                        <div class="back-link"><a href="#">Back to <span>Women’s Clothing</span></a></div>
+                        <div class="product-name">
+                            <h2 itemprop="name">Sofi Btlouse</h2>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <p class="availability in-stock">Availability: 
+                                <span><link itemprop="availability" href="#">In stock</span>
+                            </p>
+                        </div>
+                        <div class="price-box">
+                            <p class="old-price">
+                                <span class="price-label">Regular Price:</span>
+                                <span class="price"> $123.00</span>
+                            </p>
+                            <p class="special-price">
+                                <span class="price-label">Special Price</span>
+                                <span class="price"><span class="price">$100.00</span></span>
+                            </p>
+                        </div>
+                        <h3 class="title-short-description">Quick Overview</h3> 
+                        <div class="short-description">
+                            <div class="std">
+                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                            </div>
+                        </div>
+                        <div class="add-to-box">
+                            <div class="add-to-cart">                               
+                                <div class="control-qty">
+                                    <span type="button" class="quantity-controls quantity-plus" onclick=""><span></span></span>
+                                    <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Qty" class="input-text qty">
+                                    <span type="button" class="quantity-controls quantity-minus" onclick=""><span></span></span>
+                                </div>
+                                <button type="button" title="Add to Cart" id="product-addtocart-button" class="button btn-cart" onclick=""><span class="add-cart">Add to Cart</span><span class="border-bottom"></span></button>
+                            </div>
+                            <ul class="add-to-links">
+                                <li><a href="#" title="" class="link-wishlist">Add to Wishlist</a></li>
+                                <li><a href="#" title="Add to Compare" class="link-compare">Add to Compare</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="info-detail">
+                <div id="accordion">
+                    <h3>description</h3>
+                    <div>
+                        <h2>Details</h2>
+                        <div class="std" itemprop="description">
+                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim    
+                        </div>
+                    </div>
+                    <h3>Information</h3>
+                    <div>
+                        <p>
+                            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                            suscipit faucibus urna.
+                        </p>
+                    </div>
+                    <h3>Tags</h3>
+                    <div>
+                        <p>
+                            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                        </p>
+                        <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                        </ul>
+                    </div>
+                    <h3>Reviews</h3>
+                    <div>
+                        <p>
+                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                            mauris vel est.
+                        </p>
+                        <p>
+                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                            inceptos himenaeos.
+                        </p>
+                    </div>
+                    <h3>Custom Tab</h3>
+                    <div>
+                        <p>
+                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                            mauris vel est.
+                        </p>
+                        <p>
+                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                            inceptos himenaeos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div>
+                    <div class="col-sm-2">
+                        <h5>Customer Service</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Terms of payment</a></li>
+                            <li><a href="#">Terms of sale</a></li>
+                            <li><a href="#">Delivery terms and conditions</a></li>
+                            <li><a href="#">Returns and Refunds</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Information</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Affiliate</a></li>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">How to Shop</a></li>
+                            <li><a href="#">About Nelly</a></li>
+                            <li><a href="#">Investor relations</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Campaigns </h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Evening dresses</a></li>
+                            <li><a href="#">Makeup</a></li>
+                            <li><a href="#">Training clothes</a></li>
+                            <li><a href="#">Special Occasion Dresses</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Stores</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Paris</a></li>
+                            <li><a href="#">New York</a></li>
+                            <li><a href="#">London</a></li>
+                            <li><a href="#">Madrid</a></li>
+                            <li><a href="#">Tokio</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Social</h5>
+                        <ul class="list-unstyled social">
+                            <li>
+                                <a href="#"><img src="images/icon-twitter.png"></a>
+                                <a href="#"><img src="images/icon-p.png"></a>
+                                <a href="#"><img src="images/icon-face.png"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/icon-google.png"></a>
+                                <a href="#"><img src="images/icon-t.png"></a>
+                                <a href="#"><img src="images/icon-v.png"></a>
+                            </li>                            
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>&nbsp;</h5>
+                        <ul class="list-unstyled">
+                            <li><img src="images/icon-secure.png"></li>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+            <div class="copy-right"><p class="">© LookShop.com<br/>All Rights Reserved</p></div>
+        </footer>
+        <script type="text/javascript">
+            $('.bxslider-category').bxSlider({
+                mode: 'fade',
+                captions: false
+            });
+        </script>
+    </body>
+</html>
