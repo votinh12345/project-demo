@@ -1,4 +1,7 @@
-<?php namespace App\Http\Controllers;
+<?php 
+namespace App\Http\Controllers;
+use App\Models\BannerImages;
+use MenuHelper;
 
 class HomeController extends Controller {
 
@@ -30,6 +33,8 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
+        $data = MenuHelper::getMenu();
+        var_dump($data);die;
 		return view('home.index');
 	}
 
